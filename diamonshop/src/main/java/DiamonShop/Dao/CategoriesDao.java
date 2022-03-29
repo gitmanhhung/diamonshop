@@ -12,9 +12,7 @@ import DiamonShop.Entity.MapperCategories;
 import DiamonShop.Entity.MapperSlides;
 import DiamonShop.Entity.Slides;
 @Repository
-public class CategoriesDao {
-	@Autowired
-	public JdbcTemplate _jdbcTemplate;
+public class CategoriesDao extends BaseDao {
 	
 	public List<Categories> GetDataCategory(){
 		List<Categories> list = new ArrayList<Categories>();

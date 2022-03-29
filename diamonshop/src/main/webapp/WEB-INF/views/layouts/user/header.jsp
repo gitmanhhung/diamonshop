@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+	
 <header>
 	<header id="header">
 		<div class="row">
@@ -44,12 +46,9 @@ Navigation Bar Section
 				</a>
 				<div class="nav-collapse">
 					<ul class="nav">
-						<li class="active"><a href="index.html">Home </a></li>
-						<li class=""><a href="list-view.html">List View</a></li>
-						<li class=""><a href="grid-view.html">Grid View</a></li>
-						<li class=""><a href="three-col.html">Three Column</a></li>
-						<li class=""><a href="four-col.html">Four Column</a></li>
-						<li class=""><a href="general.html">General Content</a></li>
+						<c:forEach var="item" items="${menus}">
+						<li class="active"><a href="index.html">${item.name } </a></li>
+						</c:forEach>
 					</ul>
 					<form action="#" class="navbar-search pull-left">
 						<input type="text" placeholder="Search" class="search-query span2">
