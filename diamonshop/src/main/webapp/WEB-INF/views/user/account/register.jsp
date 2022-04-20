@@ -40,9 +40,8 @@
 			<div class="well well-small alert alert-warning cntr">
 				<h2>50% Discount</h2>
 				<p>
-					only valid for online order. <br>
-					<br>
-					<a class="defaultBtn" href="#">Click here </a>
+					only valid for online order. <br> <br> <a
+						class="defaultBtn" href="#">Click here </a>
 				</p>
 			</div>
 			<div class="well well-small">
@@ -51,7 +50,7 @@
 			</div>
 
 			<a class="shopBtn btn-block" href="#">Upcoming products <br>
-			<small>Click to view</small></a> <br> <br>
+				<small>Click to view</small></a> <br> <br>
 			<ul class="nav nav-list promowrapper">
 				<li>
 					<div class="thumbnail">
@@ -112,56 +111,54 @@
 				<div class="span4">
 					<div class="well">
 						<h5>ĐĂNG KÍ</h5>
-						<form>
+						<h5>${status}</h5>
+						
+						<form:form action="Register" modelAttribute="user" method="POST">
 							<div class="control-group">
 								<label class="control-label" for="inputEmail">E-mail</label>
 								<div class="controls">
-									<input class="span3" type="text" placeholder="Email">
+									<form:input type="email" path="user" />
 								</div>
 								<label class="control-label" for="inputEmail">Mật Khẩu</label>
 								<div class="controls">
-									<input class="span3" type="text" placeholder="Email">
+									<form:input type="" path="password" />
 								</div>
 								<label class="control-label" for="inputEmail">Họ và Tên</label>
 								<div class="controls">
-									<input class="span3" type="text" placeholder="Email">
+									<form:input type="" path="display_name" />
 								</div>
 								<label class="control-label" for="inputEmail">Địa chỉ</label>
 								<div class="controls">
-									<input class="span3" type="text" placeholder="Email">
+									<form:input type="" path="address" />
 								</div>
 							</div>
 							<div class="controls">
 								<button type="submit" class="btn block">Create Your
 									Account</button>
 							</div>
-						</form>
+						</form:form>
 					</div>
 				</div>
 				<div class="span1">&nbsp;</div>
 				<div class="span4">
 					<div class="well">
-						<h5>ALREADY REGISTERED ?</h5>
-						<form>
+						<h5>Đăng Nhập Hệ Thống</h5>
+						<h5>${statuslogin}</h5>
+						<form:form action="dang-nhap" modelAttribute="user" method="POST">
 							<div class="control-group">
-								<label class="control-label" for="inputEmail">Email</label>
+								<label class="control-label" for="inputEmail">Tên Đăng Nhập</label>
 								<div class="controls">
-									<input class="span3" type="text" placeholder="Email">
+									<form:input type="email" path="user" />
+								</div>
+								<label class="control-label" for="inputEmail">Mật Khẩu</label>
+								<div class="controls">
+									<form:input type="" path="password" />
 								</div>
 							</div>
-							<div class="control-group">
-								<label class="control-label" for="inputPassword">Password</label>
-								<div class="controls">
-									<input type="password" class="span3" placeholder="Password">
-								</div>
+							<div class="controls">
+								<button type="submit" class="btn block">Đăng Nhập</button>
 							</div>
-							<div class="control-group">
-								<div class="controls">
-									<button type="submit" class="defaultBtn">Sign in</button>
-									<a href="#">Forget password?</a>
-								</div>
-							</div>
-						</form>
+						</form:form>
 					</div>
 				</div>
 			</div>
